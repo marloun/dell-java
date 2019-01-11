@@ -23,6 +23,11 @@ public class PigLatin {
 	public static void convertToPigLatin(String inputWord) {
 		int len = inputWord.length();
 		System.out.println("There are " + len + " character in " + inputWord);
+		for (int i=0; i<len; i++) {
+			char positionalCharacter = inputWord.charAt(i);
+			System.out.println(i + " = " + positionalCharacter);
+		};
+		
 		
 	};
 
