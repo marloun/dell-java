@@ -1,21 +1,37 @@
-import java.util.*;
-import java.util.Random;
+/**
+ * @author Marloun_Bayari
+ * @ProjectName Lesson6-Statistics
+ * @DateSubmitted 02/06/2019
+ */
+
 import java.util.Scanner;
 
 public class Statistics {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 		System.out.println("Enter in an array of number, delimited by comma(,).");
 		System.out.println();
 		Scanner reader = new Scanner(System.in);
 		String setofNum = reader.nextLine();
 		reader.close();
 		
-		String[] numArray = setofNum.split(",");
-		Integer[] intArray = new Integer[numArray.length];
+		String[] numArray = setofNum.split(","); // Convert a String to string array, delimited by commas
+		Integer[] intArray = new Integer[numArray.length]; // Create an integer Array
 		
-		System.out.println("Min Number in Array: " + minNumber(numArray, intArray));
+		/**
+		 * the following methods were called directly in the following sysout
+		 * minNumber(String[] inNumArray, Integer[] inIntArray)
+		 * maxNumber(String[] inNumArray, Integer[] inIntArray)
+		 * numOfElements (Integer[] inArray)
+		 * avgArray(Integer[] inArray)
+		 * umArray(Integer[] inArray)
+		 * 
+		 * Instead of doing a sysout in each individual method, I chose to return the value back to main... for practice
+		 * 
+		 */
+		
+		System.out.println("Min Number in Array: " + minNumber(numArray, intArray)); 
 		System.out.println("Max Number in Array: " + maxNumber(numArray, intArray));
 		System.out.println("Number of Element in Array: " + numOfElements(intArray));
 		System.out.println("Sum of Array: " + sumArray(intArray)); ;
@@ -24,7 +40,7 @@ public class Statistics {
 	
 	// Methods
 
-	// Determine minmum number
+	// Determine mininum number
 	public static int minNumber(String[] inNumArray, Integer[] inIntArray) {
 		int minnum = Integer.parseInt(inNumArray[0]);
 		for (int i = 0; i < inNumArray.length; i++ ) {
@@ -49,8 +65,7 @@ public class Statistics {
 				maxnum = inIntArray[i];
 			}
 		}
-		return maxnum;
-		
+		return maxnum;		
 	}
 	
 	// Determine the number of elements in array
