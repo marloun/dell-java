@@ -1,9 +1,8 @@
-/**
- * 
- */
 
 /**
  * @author Marloun_Bayari
+ * @Title - Lesson7-GradeBook
+ * @Revision - Final
  *
  */
 
@@ -37,7 +36,7 @@ public class GradeBook {
 			
 		}
 		
-		ArrayList<String> names = new ArrayList(studentGradesStore.keySet());
+		ArrayList<String> names = new ArrayList<String>(studentGradesStore.keySet());
 		
 		for(int i=0; i < names.size(); i++) {
 			Double avgGrades = getGradesAverage(studentGradesStore.get(names.get(i)));
@@ -45,13 +44,14 @@ public class GradeBook {
 			studentGradesAvg.put(inName, avgGrades);		
 		}
 		
-		ArrayList<String> studentNames = new ArrayList(studentGradesAvg.keySet());
+		ArrayList<String> studentNames = new ArrayList<String>(studentGradesAvg.keySet());
 		
-		System.out.println("Student 	| Grade Average");
-		System.out.println("----------------|----------------");
+		System.out.println("Student 		| Grade Average");
+		System.out.println("------------------------|-----------------------");
 		
+		// Output of values from studentGradesAvg HashMap
 		for (int i=0; i < studentNames.size(); i++) {
-			System.out.println(studentNames.get(i) + "		| " + studentGradesAvg.get(studentNames.get(i)));
+			System.out.println(studentNames.get(i) + "			| " + studentGradesAvg.get(studentNames.get(i)));
 			
 		}
 		
@@ -59,6 +59,12 @@ public class GradeBook {
 
 	}
 	
+	/**
+	 * 
+	 * @return - Number of students to size the HasMap
+	 * Method to determine how many students to enter in data far.  Used in a loop
+	 */
+
 	public static int getNumStudents() {
 		System.out.println("Enter the amount of students to enter grades");
 		Scanner getNum = new Scanner(System.in);
@@ -66,6 +72,12 @@ public class GradeBook {
 		return inStudentNum;
 	}
 	
+	/**Method to take in a String, convert to Array, then parse the values of each value in array to a Double
+	 * 
+	 * @param inGrades
+	 * @return - double value to be inserted to new Hashmap
+	 * 
+	 */
 	public static Double getGradesAverage(String inGrades) {
 		String[] numArray = inGrades.split(",");
 		Double[] doubleArray = new Double[numArray.length];
