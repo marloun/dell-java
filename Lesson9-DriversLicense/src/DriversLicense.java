@@ -5,7 +5,7 @@ public class DriversLicense {
 	//Attributes
 	public String firstName;
 	public String lastName;
-	public int height;
+	public int height;  // in inches
 	public String gender;
 	
 	public int MM;

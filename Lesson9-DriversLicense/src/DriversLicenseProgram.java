@@ -1,6 +1,7 @@
 
 /**
  * @author Marloun_Bayari
+ * @Title DriverLicenseProgram.java
  *
  */
 
@@ -19,12 +20,14 @@ public class DriversLicenseProgram {
 		
 		/**
 		 * Setting Static information to Classes
-		 * parameters to set
+		 * parameters to set from DriversLicense class
 		 * public String firstName;
 		 * public String lastName;
-		 * public String DOB;
 		 * public int height;
 		 * public String gender;
+		 * public int MM;
+		 * public int DD;
+		 * public int YYYY;
 		 */
 		
 		//Driver 1
@@ -61,22 +64,18 @@ public class DriversLicenseProgram {
 		System.out.println(dl1.getAge());
 		System.out.println();
 		
-		//Printout Driver 1
+		//Printout Driver 3
 		System.out.println("Drivers Name: " + dl2.getFullName());
 		System.out.println("Drivers Height: " + dl2.getHeight() + '"');
 		System.out.println("Drivers Biological Gender: " + dl2.getGender());
 		System.out.println(dl2.getAge());
 		System.out.println();
 				
-		//Printout Driver 1
+		//Printout Driver 3
 		System.out.println("Drivers Name: " + dl3.getFullName());
 		System.out.println("Drivers Height: " + dl3.getHeight() + '"');
 		System.out.println("Drivers Biological Gender: " + dl3.getGender());	
 		System.out.println(dl2.getAge());
-		System.out.println();
-		
-		
-
-		
+		System.out.println();		
 		}
 }
