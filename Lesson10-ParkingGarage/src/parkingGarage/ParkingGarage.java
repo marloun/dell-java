@@ -43,6 +43,7 @@ public class ParkingGarage {
 		
 	}
 	
+	//Method to take in spot position and to remove car
 	void vacate (int spot) {
 		try {
 		validSpotCheck(spot);
@@ -59,6 +60,7 @@ public class ParkingGarage {
 		}
 	}
 	
+	// Simple method to list all cars in Garage
 	void printInventory() {
 		System.out.println("Garage Inventory: ");
 		for (int i=0; i<parkingSlot.length; i++) {

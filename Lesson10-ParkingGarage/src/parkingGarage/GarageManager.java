@@ -5,6 +5,8 @@ package parkingGarage;
 
 /**
  * @author Marloun_Bayari
+ * @version 1.0
+ * Title: Lesson 10 - Parking Garage
  *
  */
 public class GarageManager {
@@ -32,6 +34,8 @@ public class GarageManager {
 		System.out.println("***Test - Attempt to park car already in slot");
 		G1.park(coche, 3);
 		
+		
+		
 		//attempting to vacate spot, and part coche
 		System.out.println("***Test - Remove car, and park car in vacated spot");
 		G1.vacate(3);
@@ -47,12 +51,18 @@ public class GarageManager {
 		System.out.println("*** Test - Empty Garage 2");
 		G2.printInventory();
 		
+		
+		
 		// Insert car into 1st 5 slots
 		System.out.println("*** Test - Parking 5 cars");
 		for (int i=0; i<5; i++) {
 			G2.park(coche, i);
 		}
 		G2.printInventory();
+		
+		//Attempting to remove a car from a spot that doesn't have one
+		System.out.println("*** Test - Removing car from and empty spot");
+		G2.vacate(7);
 		
 		//Parking car in empty spot(s)
 		System.out.println("*** Test - Parking Cars in empty slots");
