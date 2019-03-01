@@ -47,10 +47,17 @@ public class CarLot {
 	
 	//Print inventory
 	public void printvlist() {
-		System.out.println("Lot: " + this.name);
-		for(Vehicle inVehicle : vlist) {
-			System.out.println(inVehicle);
+		
+		for (int i=0; i<vlist.size(); i++) {
+
+			System.out.println("Make: " + vlist.get(i).getMake());
+			System.out.println("Model: "+ vlist.get(i).getModel());
+			System.out.println("Price: $" + vlist.get(i).getPrice());
+			System.out.println("License: " + vlist.get(i).getLicenseNumber());
+			System.out.println("");
+			
 		}
+		
 	}
 
 	

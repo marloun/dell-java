@@ -48,11 +48,9 @@ public abstract class Vehicle {
 	public void setPrice(int price) {
 		this.price = price;
 	}	
-	public void printDescription() {
-		
-	}
+
 	
-	public void printDesctiption() {
+	public void printDescription() {
 		System.out.println("Make:" + make);
 		System.out.println("Model: "  + model);
 		System.out.println("License Number: " + licenseNumber);
